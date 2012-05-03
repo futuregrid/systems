@@ -8,8 +8,8 @@ all:
 	pwd
 	ls
 	git add .
+	git add _sources
+	git add _static
 	git commit -a -m "updating the github pages"
-	git commit -a _sources
-	git commit -a _static
 	git push
 	git checkout master

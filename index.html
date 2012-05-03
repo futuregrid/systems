@@ -77,6 +77,15 @@
 
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to FuturGrid Systems Scripts</a></li>
+<li><a class="reference internal" href="#script-to-list-the-projects-of-a-user">Script to list the projects of a user</a></li>
+<li><a class="reference internal" href="#known-bugs-and-feature-requests">Known Bugs and Feature Requests</a><ul>
+</ul>
+</li>
+</ul>
+
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/index.txt"
@@ -118,17 +127,30 @@
 </ul>
 </dd>
 </dl>
-<p>place to share system related scripts
-Script to get user project info:</p>
-<p>fg-user-project-info.py</p>
+</div>
+<div class="section" id="script-to-list-the-projects-of-a-user">
+<h1>Script to list the projects of a user<a class="headerlink" href="#script-to-list-the-projects-of-a-user" title="Permalink to this headline">¶</a></h1>
+<p>Script Name:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">fg</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">info</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>To install this script, please, put the .py file and the FGLdapCacert.pem in the same directory.</p>
 <blockquote>
-<div><p>To install, put the .py file and the FGLdapCacert.pem in the same directory.</p>
-<p>By default it points to the FG master ldap to retrieve the project/group info. To use a different ldap, put such content in a file named futuregrid.cfg also in the same directory:</p>
-<p>[LDAP]
-LDAPHOST=im3r.idp.iu.futuregrid.org</p>
+<div><p>By default it points to the FG master ldap to retrieve the project/group info. To use a different ldap, put such content in a file named futuregrid.cfg also in the same directory:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span><span class="n">LDAP</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>LDAPHOST=im3r.idp.iu.futuregrid.org</p>
+</div></blockquote>
 <p>To run, python 2.7 and ldap module is required. On india, &#8216;module load python_w-cmd2&#8217; will set the environment properly.</p>
 <p>To integrate the functionality into another python program, just grab everything but the main() function, and call getuserProjs() from within your program.</p>
-</div></blockquote>
+</div>
+<div class="section" id="known-bugs-and-feature-requests">
+<h1>Known Bugs and Feature Requests<a class="headerlink" href="#known-bugs-and-feature-requests" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>we do not yet have a setup.p script</li>
+<li>flags such as -txt, -html -JSON need to be added</li>
+</ul>
 <div class="toctree-wrapper compound">
 <ul class="simple">
 </ul>

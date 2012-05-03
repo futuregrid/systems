@@ -10,6 +10,7 @@ fg-user-project-info.py
 * By default it points to the FG master ldap to retrieve the project/group info. To use a different ldap, put such content in a file named futuregrid.cfg also in the same directory:
 
     [LDAP]
+    
     LDAPHOST=im3r.idp.iu.futuregrid.org
 
 * To run, python 2.7 and ldap module is required. On india, 'module load python_w-cmd2' will set the environment properly.

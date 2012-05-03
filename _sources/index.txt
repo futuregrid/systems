@@ -1,51 +1,27 @@
-Welcome to FuturGrid Development Projects
+Welcome to FuturGrid Systems Scripts
 =========================================
 
-Within FutureGrid we provide a number of devellopment projects. This
-page is used to provide you with easy links to them. All projects
-listed are managed in github.
-
-Projects
-============
-
-Code related to FutureGrid
-
-Rain
-  * A project to do bare metal and VM based dynamic provisioning
-  * Documentation: http://futuregrid.github.com/rain
-  * Source: https://github.com/futuregrid/rain
-
-Rain Move: Cloud Shift
-  * A project to move resources between different cloud and HPC services
-  * Documentation: http://futuregrid.github.com/rain-move
-  * Source: https://github.com/futuregrid/rain-move
-  * Issues: https://github.com/futuregrid/rain-move/issues
-
-Cloud Metric
-  * A project to measure and display metric information about usage and utilization of your cloud 
-  * Documentation: https://portal.futuregrid.org/doc/metric/index.html
-  * Source: https://github.com/futuregrid/futuregrid-cloud-metrics
-  * Issues: https://github.com/futuregrid/futuregrid-cloud-metrics/issues
-..  Documentation: https://futuregrid.github.com/futuregrid-cloud-metrics
-
-Virtual Cluster
+Systems Scripts
   * A project to create a SLURM based cluster in your cloud and run MPI jobs on it
-  * Documentation: http://futuregrid.github.com/virtual-cluster
-  * Source: https://github.com/futuregrid/virtual-cluster
-  * Issues: https://github.com/futuregrid/virtual-cluster/issues
+  * Documentation: http://futuregrid.github.com/systems
+  * Source: https://github.com/futuregrid/systems
+  * Issues: https://github.com/futuregrid/systems/issues
 
-Authentication
-  * A project to unify authentication between Eucalyptus, OpenStack, and Nimbus
-  * Documentation: todo
-  * Source: todo
-  * Issues: todo
+place to share system related scripts
+Script to get user project info:
 
-Mediawiki Jira Issues
-  * A project that can be used to automatically create reports based on comments submitted to jira, returning jira issues in mediawiki, and executing arbitrary queries from mediawiki to jira that are rendered in mediawiki
-  * Documentation: todo
-  * Source: todo
-  * Issues: todo
+fg-user-project-info.py
 
+    To install, put the .py file and the FGLdapCacert.pem in the same directory.
+
+    By default it points to the FG master ldap to retrieve the project/group info. To use a different ldap, put such content in a file named futuregrid.cfg also in the same directory:
+
+    [LDAP]
+    LDAPHOST=im3r.idp.iu.futuregrid.org
+
+    To run, python 2.7 and ldap module is required. On india, 'module load python_w-cmd2' will set the environment properly.
+
+    To integrate the functionality into another python program, just grab everything but the main() function, and call getuserProjs() from within your program.
 
 .. toctree::
    :maxdepth: 2

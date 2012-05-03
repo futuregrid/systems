@@ -10,7 +10,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to FuturGrid Development Projects &mdash; FutureGrid Cloud Code 0.1 documentation</title>
+    <title>Welcome to FuturGrid Systems Scripts &mdash; FutureGrid Cloud Code 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -77,14 +77,6 @@
 
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Welcome to FuturGrid Development Projects</a></li>
-<li><a class="reference internal" href="#projects">Projects</a><ul>
-</ul>
-</li>
-</ul>
-
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/index.txt"
@@ -114,66 +106,29 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="welcome-to-futurgrid-development-projects">
-<h1>Welcome to FuturGrid Development Projects<a class="headerlink" href="#welcome-to-futurgrid-development-projects" title="Permalink to this headline">¶</a></h1>
-<p>Within FutureGrid we provide a number of devellopment projects. This
-page is used to provide you with easy links to them. All projects
-listed are managed in github.</p>
-</div>
-<div class="section" id="projects">
-<h1>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h1>
-<p>Code related to FutureGrid</p>
+  <div class="section" id="welcome-to-futurgrid-systems-scripts">
+<h1>Welcome to FuturGrid Systems Scripts<a class="headerlink" href="#welcome-to-futurgrid-systems-scripts" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
-<dt>Rain</dt>
-<dd><ul class="first last simple">
-<li>A project to do bare metal and VM based dynamic provisioning</li>
-<li>Documentation: <a class="reference external" href="http://futuregrid.github.com/rain">http://futuregrid.github.com/rain</a></li>
-<li>Source: <a class="reference external" href="https://github.com/futuregrid/rain">https://github.com/futuregrid/rain</a></li>
-</ul>
-</dd>
-<dt>Rain Move: Cloud Shift</dt>
-<dd><ul class="first last simple">
-<li>A project to move resources between different cloud and HPC services</li>
-<li>Documentation: <a class="reference external" href="http://futuregrid.github.com/rain-move">http://futuregrid.github.com/rain-move</a></li>
-<li>Source: <a class="reference external" href="https://github.com/futuregrid/rain-move">https://github.com/futuregrid/rain-move</a></li>
-<li>Issues: <a class="reference external" href="https://github.com/futuregrid/rain-move/issues">https://github.com/futuregrid/rain-move/issues</a></li>
-</ul>
-</dd>
-<dt>Cloud Metric</dt>
-<dd><ul class="first last simple">
-<li>A project to measure and display metric information about usage and utilization of your cloud</li>
-<li>Documentation: <a class="reference external" href="https://portal.futuregrid.org/doc/metric/index.html">https://portal.futuregrid.org/doc/metric/index.html</a></li>
-<li>Source: <a class="reference external" href="https://github.com/futuregrid/futuregrid-cloud-metrics">https://github.com/futuregrid/futuregrid-cloud-metrics</a></li>
-<li>Issues: <a class="reference external" href="https://github.com/futuregrid/futuregrid-cloud-metrics/issues">https://github.com/futuregrid/futuregrid-cloud-metrics/issues</a></li>
-</ul>
-</dd>
-</dl>
-<dl class="docutils">
-<dt>Virtual Cluster</dt>
+<dt>Systems Scripts</dt>
 <dd><ul class="first last simple">
 <li>A project to create a SLURM based cluster in your cloud and run MPI jobs on it</li>
-<li>Documentation: <a class="reference external" href="http://futuregrid.github.com/virtual-cluster">http://futuregrid.github.com/virtual-cluster</a></li>
-<li>Source: <a class="reference external" href="https://github.com/futuregrid/virtual-cluster">https://github.com/futuregrid/virtual-cluster</a></li>
-<li>Issues: <a class="reference external" href="https://github.com/futuregrid/virtual-cluster/issues">https://github.com/futuregrid/virtual-cluster/issues</a></li>
-</ul>
-</dd>
-<dt>Authentication</dt>
-<dd><ul class="first last simple">
-<li>A project to unify authentication between Eucalyptus, OpenStack, and Nimbus</li>
-<li>Documentation: todo</li>
-<li>Source: todo</li>
-<li>Issues: todo</li>
-</ul>
-</dd>
-<dt>Mediawiki Jira Issues</dt>
-<dd><ul class="first last simple">
-<li>A project that can be used to automatically create reports based on comments submitted to jira, returning jira issues in mediawiki, and executing arbitrary queries from mediawiki to jira that are rendered in mediawiki</li>
-<li>Documentation: todo</li>
-<li>Source: todo</li>
-<li>Issues: todo</li>
+<li>Documentation: <a class="reference external" href="http://futuregrid.github.com/systems">http://futuregrid.github.com/systems</a></li>
+<li>Source: <a class="reference external" href="https://github.com/futuregrid/systems">https://github.com/futuregrid/systems</a></li>
+<li>Issues: <a class="reference external" href="https://github.com/futuregrid/systems/issues">https://github.com/futuregrid/systems/issues</a></li>
 </ul>
 </dd>
 </dl>
+<p>place to share system related scripts
+Script to get user project info:</p>
+<p>fg-user-project-info.py</p>
+<blockquote>
+<div><p>To install, put the .py file and the FGLdapCacert.pem in the same directory.</p>
+<p>By default it points to the FG master ldap to retrieve the project/group info. To use a different ldap, put such content in a file named futuregrid.cfg also in the same directory:</p>
+<p>[LDAP]
+LDAPHOST=im3r.idp.iu.futuregrid.org</p>
+<p>To run, python 2.7 and ldap module is required. On india, &#8216;module load python_w-cmd2&#8217; will set the environment properly.</p>
+<p>To integrate the functionality into another python program, just grab everything but the main() function, and call getuserProjs() from within your program.</p>
+</div></blockquote>
 <div class="toctree-wrapper compound">
 <ul class="simple">
 </ul>

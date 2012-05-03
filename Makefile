@@ -7,7 +7,7 @@ all:
 	cp -r /tmp/git-systems/doc/doc/build/html/* .
 	git add .
 	git commit -a -m "updating the github pages"
-#	git commit -a _sources
-#	git commit -a _static
+	git commit -a _sources
+	git commit -a _static
 	git push
 	git checkout master

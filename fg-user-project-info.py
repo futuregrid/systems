@@ -10,9 +10,9 @@ import ldap
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-u', '--user', dest='user', required=True, help="specify an ldap username/uid")
-    parser.add_argument('-t', '--withtitle', dest='withtitle', action="store_true", help="whether to include project title")
-    parser.add_argument('-l', '--withlink', dest='withlink', action="store_true", help="whether to include url of the projects")
+    parser.add_argument('-u', '--user', dest='user', required=True, help="specify an ldap username/uid to be queried")
+    parser.add_argument('-t', '--withtitle', dest='withtitle', action="store_true", help="flag to include project title")
+    parser.add_argument('-l', '--withlink', dest='withlink', action="store_true", help="flag to include url/link of the projects")
     args = parser.parse_args()
     user = args.user
     withtitle = args.withtitle

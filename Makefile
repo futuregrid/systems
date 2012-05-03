@@ -1,15 +1,13 @@
 all:
 	cd /tmp
-	rm -rf /tmp/git-systems
-	mkdir -p /tmp/git-systems
-	cd /tmp/git-systems; git clone git://github.com/futuregrid/doc.git
-	cd /tmp/git-systems/doc/doc; ls; make html
-	cp -r /tmp/git-systems/doc/doc/build/html/* .
-	pwd
-	ls
+	rm -rf /tmp/vc
+	mkdir -p /tmp/vc
+	cd /tmp/vc; git clone git://github.com/futuregrid/virtual-cluster.git
+	cd /tmp/vc/virtual-cluster/doc; ls; make html
+	cp -r /tmp/vc/virtual-cluster/doc/build/html/* .
 	git add .
-	git add _sources
-	git add _static
 	git commit -a -m "updating the github pages"
+#	git commit -a _sources
+#	git commit -a _static
 	git push
 	git checkout master

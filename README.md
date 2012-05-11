@@ -7,7 +7,7 @@ Documentation of the Systems scripts
 * Python 2.7 is recommended. For 2.6, manually install argparse module should be fine too.
 
 * As an example for set up - in india, put the .py and .pem files together in the same directory, then
-                           - 
+
        `module load python_w-cmd2`
 
 will set up the necessary python environment - load python 2.7 and python ldap module.

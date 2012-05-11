@@ -1,5 +1,7 @@
 Documentation of the Systems scripts
-=======
+==============
+
+### CLI tool to get user project info:
 
 * Accessing to LDAP is done via anonymous binding, however the server is firewalled. It should work only from within FG domain.
 * The FG LDAP server ssl certificate is a self-signed one, and the ca certificate file 'FGLdapCacert.pem' is distributed together with the script.

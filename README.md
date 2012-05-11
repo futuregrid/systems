@@ -13,7 +13,7 @@ Documentation of the Systems scripts
 will set up the necessary python environment - load python 2.7 and python ldap module.
 
 * To run:
-* 
+
         `./fg-user-project-info.py -u LDAPUID`
 
 will print out the project ids;

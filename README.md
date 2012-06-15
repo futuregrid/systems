@@ -1,7 +1,7 @@
 Documentation of the Systems scripts
 ==============
 
-### CLI tool to get user project info:
+### CLI tool to get user name/project info:
 
 * Accessing to LDAP is done via anonymous binding, however the server is firewalled. It should work only from within FG domain.
 * The FG LDAP server ssl certificate is a self-signed one, and the ca certificate file 'FGLdapCacert.pem' is distributed together with the script.
@@ -27,6 +27,14 @@ will include also the project title;
         ./fg-user-project-info.py -u LDAPUID -t -l
         
 will also include the link to the project url in the portal.
+
+        ./fg-user-project-info.py -u LDAPUID -n
+
+will print out only the user full name in the format of:
+
+        GIVENNAME,LASTNAME,UIDNUMBER
+
+The UIDNUMBER is useful only when name ambiguous occurs for two different uid/username.
 
 * You could also integrate the functions into your code and manipulate the output directly in python.
 

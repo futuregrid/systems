@@ -6,7 +6,7 @@ Systems Scripts
   * Source: https://github.com/futuregrid/systems
   * Issues: https://github.com/futuregrid/systems/issues
 
-Script to list the projects of a user
+Script to list the projects or full name of a user
 ======================
 
 Script Name::

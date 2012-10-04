@@ -59,7 +59,7 @@ def getUserProjs(user, withtitle=False, withlink=False, showname=False):
         if userprojs.has_key(user):
             if showname:
                 ldapfilter = "(&(objectclass=inetOrgPerson)(uid=" + user + "))"
-                ldapattribs = ['uid', 'uidNumber', 'givenName', 'sn']
+                ldapattribs = ['uid', 'uidNumber', 'givenName', 'sn', 'mail']
                 ldapresults = list(ldapconn.search_s(ldapbasedn, ldapscope, ldapfilter, ldapattribs))
                 for ldapresult in ldapresults:
                     #print ldapresult[1] # ldapresult[0] is dn.
@@ -67,8 +67,9 @@ def getUserProjs(user, withtitle=False, withlink=False, showname=False):
                     gn = ldapresult[1]['givenName'][0]
                     sn = ldapresult[1]['sn'][0]
                     uidNumber = ldapresult[1]['uidNumber'][0]
+                    mail = ldapresult[1]['mail'][0]
                     #retprojs = [user + ':' + gn + '|' + sn + '|' + uidNumber]
-                    retprojs = [gn + ',' + sn + ',' + uidNumber]
+                    retprojs = [gn + ',' + sn + ',' + uidNumber + ',' + mail]
             else:
                 projs = userprojs[user]
                 retprojs = projs
